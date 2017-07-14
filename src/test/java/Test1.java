@@ -1,5 +1,7 @@
 import org.junit.Test;
 
+import java.text.DecimalFormat;
+
 /**
  * Created by Administrator on 2017/7/4.
  */
@@ -15,5 +17,12 @@ public class Test1 {
         }else {
             System.out.println(foreignName.concat(" "+color));
         }
+    }
+    @Test
+    public void test2(){
+        Integer intNum=111;
+        Float floatPrice=intNum.floatValue()/100;
+        DecimalFormat df = new DecimalFormat("0.00");//格式化小数，不足的补0
+        System.out.println(Float.valueOf(df.format(floatPrice)));
     }
 }
